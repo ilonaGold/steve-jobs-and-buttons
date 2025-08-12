@@ -13,51 +13,52 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/favicon.png" />
     <title>Tribute to Steve Jobs Via Animated Buttons</title>
   </head>
 
   <body>
-    <div class="hero-image">
-      <h1 class="glow">Buttons shall be<br />never boring</h1>
+    <div class="hero-container">
       <h2>
         "We made the buttons on the screen look so good<br />you'll want to lick
         them."
       </h2>
       <h3>~ Steve Jobs</h3>
     </div>
-    <div class="container">
-      <img src="images/steve-jobs.png" id="jobs" />
-      <div class="btn-row1">
-        <button class="btn btn-red" type="button">cLICK</button>
-        <div>
-          <button class="btn btn-orange" type="button">cLICK</button>
+    <div class="main-container">
+      <h1 class="glow">Buttons shall be<br />never boring</h1>
+      <img src="images/steve-jobs.png" class="steve-jobs-image" />
+      <div class="buttons-container">
+        <div class="btn-row1">
+          <button class="btn btn-red" type="button">cLICK</button>
+          <div>
+            <button class="btn btn-orange" type="button">cLICK</button>
+          </div>
+          <button class="btn btn-yellow" type="button">cLICK</button>
+          <button class="btn btn-chartreuse" type="button">cLICK</button>
+          <button class="btn btn-green" type="button">cLICK</button>
+          <button class="btn btn-springgreen" type="button">cLICK</button>
+          <button class="btn btn-cyan" type="button">cLICK</button>
         </div>
-        <button class="btn btn-yellow" type="button">cLICK</button>
-        <button class="btn btn-chartreuse" type="button">cLICK</button>
-        <button class="btn btn-green" type="button">cLICK</button>
-        <button class="btn btn-springgreen" type="button">cLICK</button>
-        <button class="btn btn-cyan" type="button">cLICK</button>
+        <div class="btn-row2">
+          <button class="btn btn-azure" type="button">
+            <span class="bg-height"></span><span class="btn-text">cLICK</span>
+          </button>
+          <button class="btn btn-blue" type="button">
+            <span class="bg-width"></span><span class="btn-text">cLICK</span>
+          </button>
+          <button class="btn btn-violet" type="button">cLICK</button>
+          <button class="btn btn-magenta" type="button">cLICK</button>
+          <button class="btn btn-rose" type="button">cLICK</button>
+        </div>
       </div>
-      <div class="btn-row2">
-        <button class="btn btn-azure" type="button">
-          <span class="bg-height"></span><span class="btn-text">cLICK</span>
-        </button>
-        <button class="btn btn-blue" type="button">
-          <span class="bg-width"></span><span class="btn-text">cLICK</span>
-        </button>
-        <button class="btn btn-violet" type="button">cLICK</button>
-        <button class="btn btn-magenta" type="button">cLICK</button>
-        <button class="btn btn-rose" type="button">cLICK</button>
-      </div>
-      <footer>
-        <hr />
-        <p>
-          This is a tribute to Steve Jobs (1955-2011) and his love-hate
-          relationship with buttons.
-        </p>
-      </footer>
     </div>
+    <footer>
+      <hr />
+      <p>
+        This is a tribute to Steve Jobs (1955-2011) and his love-hate
+        relationship with buttons.
+      </p>
+    </footer>
     <script>
       // On any button click, the tribute page to Steve Jobs opens in a new tab
       document.addEventListener("DOMContentLoaded", function () {
