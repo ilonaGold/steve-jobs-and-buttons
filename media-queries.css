@@ -5,10 +5,16 @@
     padding: 0 20px;
   }
 
+  h2,
+  h3 {
+    margin: 2% 5% 0 0;
+    font-size: 0.9em;
+  }
+
   .glow {
     font-size: 60px;
     top: -5%;
-    left: 2%;
+    left: 12%;
   }
 
   .steve-jobs-image {
@@ -17,7 +23,8 @@
   }
 
   .buttons-container {
-    left: 2%;
+    left: 12%;
+    bottom: 10%;
   }
 
   .btn {
@@ -40,14 +47,8 @@
     padding: 15px 0 20px;
   }
 
-  h2,
-  h3 {
-    margin: 2% 8% 0 0;
-    font-size: 0.9em;
-  }
-
   .main-container {
-    height: calc(100vh - 100px);
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -56,15 +57,8 @@
   }
 
   .glow {
-    position: relative;
-    writing-mode: initial;
-    transform: none;
-    text-align: center;
-    font-size: 45px;
-    top: 0;
-    left: 0;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    left: 5%;
+    font-size: 52px;
   }
 
   .steve-jobs-image {
@@ -72,7 +66,7 @@
     top: 0;
     left: 0;
     transform: none;
-    max-width: 280px;
+    max-width: 250px;
     margin-bottom: 20px;
   }
 
@@ -111,8 +105,8 @@
   }
 
   .hero-container {
-    height: 150px;
-    padding: 10px 0 15px;
+    height: auto;
+    padding: 15px 0 10px;
   }
 
   h2 {
@@ -124,18 +118,14 @@
     font-size: 0.85em;
   }
 
-  .main-container {
-    padding: 15px;
-    height: calc(100vh - 80px);
-  }
-
   .glow {
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom: 15px;
+    left: 6%;
   }
 
   .steve-jobs-image {
-    max-width: 240px;
+    max-width: 200px;
     margin-bottom: 15px;
   }
 
@@ -164,15 +154,25 @@
   }
 }
 
+/* Glow effect position change */
+@media screen and (max-width: 650px) {
+  .glow {
+    position: relative;
+    writing-mode: initial;
+    transform: none;
+    text-align: center;
+    font-size: 40px;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+}
+
 /* Large phones */
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
-  }
-
-  .hero-container {
-    height: 120px;
-    padding: 8px 0 12px;
   }
 
   h2 {
@@ -184,39 +184,26 @@
     font-size: 0.75em;
   }
 
-  .main-container {
-    padding: 10px;
-    height: calc(100vh - 70px);
-  }
-
   .glow {
-    font-size: 28px;
-    margin-bottom: 12px;
+    font-size: 20px;
   }
 
   .steve-jobs-image {
-    max-width: 200px;
-    margin-bottom: 12px;
+    max-width: 150px;
+    margin-bottom: 30px;
   }
 
-  .btn-row1 {
+  .btn-row1,
+  .btn-row2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 6px;
     margin-bottom: 8px;
     width: 100%;
-    max-width: 300px;
+    max-width: 380px;
   }
 
-  .btn-row2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    width: 100%;
-    max-width: 240px;
-  }
-
-  .btn {
+   .btn {
     min-width: auto;
     width: 100%;
     max-width: none;
@@ -232,19 +219,14 @@
   }
 
   p {
-    font-size: 14px;
-    padding: 20px 15px;
+    font-size: 13px;
+    padding: 20px;
     line-height: 1.4;
   }
 }
 
 /* Extra small phones */
 @media screen and (max-width: 320px) {
-  .hero-container {
-    height: 100px;
-    padding: 5px 0 10px;
-  }
-
   h2 {
     font-size: 0.6em;
     margin: 1% 5% 0 0;
@@ -252,21 +234,6 @@
 
   h3 {
     font-size: 0.65em;
-  }
-
-  .main-container {
-    padding: 8px;
-    height: calc(100vh - 60px);
-  }
-
-  .glow {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .steve-jobs-image {
-    max-width: 160px;
-    margin-bottom: 10px;
   }
 
   .btn-row1,
@@ -281,108 +248,115 @@
 
   p {
     font-size: 12px;
-    padding: 15px 10px;
+    padding: 15px 20px;
+  }
+}
+
+/* Height-specific media queries for screens taller than 1025px */
+@media screen and (min-height: 1025px) {
+  .hero-container {
+    height: 150px;
+    padding: 20px 0;
+  }
+
+  .main-container {
+    height: calc(100vh - 340px);
+    min-height: auto;
+  }
+
+  .steve-jobs-image {
+    max-width: 250px;
   }
 }
 
 /* Height-specific media queries for screens shorter than 1000px */
 @media screen and (max-height: 999px) {
   .hero-container {
-    height: 140px;
+    height: auto;
     padding: 10px 0 15px;
   }
 
   .main-container {
-    height: calc(100vh - 90px);
+    padding: 15px 20px 5px;
+    min-height: calc(100vh - 180px);
   }
 
   .glow {
-    font-size: 50px;
-    margin-bottom: 15px;
+    font-size: 42px;
   }
 
-  .steve-jobs-image {
-    max-width: 250px;
-    margin-bottom: 15px;
+  p {
+    font-size: 11px;
+    padding: 20px;
   }
 }
 
 @media screen and (max-height: 800px) {
-  .hero-container {
-    height: 120px;
-    padding: 8px 0 12px;
-  }
-
   .main-container {
-    height: calc(100vh - 70px);
-    padding: 15px;
-  }
-
-  .glow {
-    font-size: 40px;
-    margin-bottom: 12px;
+    min-height: calc(100vh - 300px);
+    height: auto;
   }
 
   .steve-jobs-image {
-    max-width: 220px;
+    max-width: 150px;
     margin-bottom: 12px;
   }
 
   .btn {
-    padding: 0.6em 1em;
+    padding: 0.5em 1em;
     margin: 6px;
   }
 
   hr {
-    margin: 25px auto 0;
-  }
-
-  p {
-    padding: 25px 20px;
+    margin-top: 10px;
   }
 }
 
 @media screen and (max-height: 600px) {
-  .hero-container {
-    height: 80px;
-    padding: 5px 0 8px;
-  }
-
   h2 {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   h3 {
-    font-size: 0.75em;
-  }
-
-  .main-container {
-    height: calc(100vh - 50px);
-    padding: 10px;
+    font-size: 0.65em;
   }
 
   .glow {
-    font-size: 30px;
-    margin-bottom: 8px;
+    display: none;
   }
 
-  .steve-jobs-image {
-    max-width: 180px;
-    margin-bottom: 8px;
+  .main-container {
+    height: calc(100vh - 180px);
   }
 
-  .btn {
+  .btn-row1,
+  .btn-row2 {
+    max-width: 250px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+.btn {
     padding: 0.4em 0.8em;
     font-size: 0.7em;
     margin: 4px;
   }
-
+  
   hr {
-    margin: 15px auto 0;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  h2,
+  h3 {
+    font-size: 0.6em;
   }
 
-  p {
-    font-size: 14px;
-    padding: 15px;
+  .steve-jobs-image {
+    display: none;
+  }
+
+  .main-container {
+    padding: 50px 0 20px;
   }
 }
