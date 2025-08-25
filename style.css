@@ -25,7 +25,8 @@ h2,
 h3 {
   color: #fff;
   text-align: right;
-  margin: 3% 10% 0 0;
+  margin: 3% 5% 0 0;
+  font-size: 1.2em;
 }
 
 .main-container {
